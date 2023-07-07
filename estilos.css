@@ -6,39 +6,69 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.container {
+.contenedor {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-image: url("./img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.icono-tiempo {
+  height: 8rem;
+  line-height: 8rem;
+  align-self: start;
+  margin-left: 4rem;
+  font-size: 1.5rem;
 }
 
 main {
-  width: 60vw;
-  height: 50vh;
-  border: 0.5rem solid #ceabe7;
-  border-radius: 1rem;
-  padding: 2.5rem;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+}
+
+.contenedor-main {
+  width: 60vw;
+  height: 50vh;
+  box-shadow: 0.5rem 0.5rem 3rem #000;
+  border-radius: 1rem;
+  padding: 5rem 8rem 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  margin-top: 2rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 button {
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+  padding: 2rem 3.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #06b8b8;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
 }

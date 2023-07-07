@@ -9,6 +9,7 @@ const respuestaChiste = async () => {
     });
     const json = await respuesta.json();
     console.log("Chiste: ", json.joke);
+    document.querySelector("#text-chiste").innerHTML = json.joke;
   } catch (err) {
     console.log(err.message);
   }
