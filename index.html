@@ -4,19 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sprint 5 IT Academy</title>
-
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" href="estilos.css" />
   </head>
 
   <body>
+    <!-- Contenido de la pagina Web de Chistes-->
+
     <div class="contenedor">
       <div class="icono-tiempo">Avui:parcialment ennuvolat</div>
 
       <main>
         <div class="contenedor-main">
-          <h1>Preparat per riure? 🤣</h1>
+          <h1 class="titulo">
+            Preparat per riure?<span class="btn-puntuacion">🤣</span>
+          </h1>
           <p id="text-chiste"></p>
-          <button onclick="respuestaChiste()">Següent acudit</button>
+
+          <!-- Botones de puntaciones -->
+
+          <div class="contenedor-btns">
+            <div class="contenedor-btns-puntuaciones">
+              <button
+                puntuacion
+                hidden
+                type="button"
+                class="btn-puntuacion"
+                onclick="puntuacion(1)"
+              >
+                🙁
+              </button>
+              <button
+                puntuacion
+                hidden
+                type="button"
+                class="btn-puntuacion"
+                onclick="puntuacion(2)"
+              >
+                😐
+              </button>
+              <button
+                puntuacion
+                hidden
+                type="button"
+                class="btn-puntuacion"
+                onclick="puntuacion(3)"
+              >
+                😆
+              </button>
+            </div>
+            <!-- Boton para el siguiente chiste -->
+
+            <button class="btn-chiste" onclick="respuestaChiste()">
+              Siguiente chiste
+            </button>
+          </div>
         </div>
       </main>
     </div>

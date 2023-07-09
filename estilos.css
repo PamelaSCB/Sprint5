@@ -6,7 +6,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .contenedor {
@@ -18,10 +18,11 @@ html {
   height: 100vh;
   background-image: url("./img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   opacity: 1;
   overflow: hidden;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .icono-tiempo {
@@ -42,7 +43,7 @@ main {
 
 .contenedor-main {
   width: 60vw;
-  height: 50vh;
+  height: 70vh;
   box-shadow: 0.5rem 0.5rem 3rem #000;
   border-radius: 1rem;
   padding: 5rem 8rem 8rem;
@@ -51,18 +52,36 @@ main {
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  margin-top: 2rem;
 }
 
-h1 {
+.titulo {
   font-size: 2.5rem;
 }
 
-p {
-  font-size: 1.7rem;
+#text-chiste {
+  font-size: 1.5rem;
 }
 
-button {
+.contenedor-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contenedor-btns-puntuaciones {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-puntuacion {
+  border: none;
+  background-color: transparent;
+  font-size: 2.8rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.btn-chiste {
   padding: 2rem 3.5rem;
   font-size: 1.3rem;
   font-weight: bold;
