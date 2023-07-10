@@ -25,7 +25,7 @@ html {
   font-weight: bolder;
 }
 
-.icono-tiempo {
+.contenedor-meteo {
   height: 8rem;
   line-height: 8rem;
   align-self: start;
@@ -81,6 +81,10 @@ main {
   cursor: pointer;
 }
 
+.btn-puntuacion:active {
+  transform: scale(1.8);
+}
+
 .btn-chiste {
   padding: 2rem 3.5rem;
   font-size: 1.3rem;
@@ -90,4 +94,16 @@ main {
   border: none;
   border-radius: 1rem;
   cursor: pointer;
+}
+
+.btn-chiste:hover {
+  font-size: 1.4rem;
+  top: 0%;
+  left: 0%;
+  background-color: #029494;
+  outline: 0.2rem solid #024141;
+}
+
+.btn-chiste:active {
+  background-color: #06b8b8;
 }

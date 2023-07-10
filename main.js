@@ -53,3 +53,21 @@ const puntuacion = (score) => {
   }
   console.table(reporteChistes);
 };
+
+const recibirInfoMeteo = async () => {
+  let infoMeteo;
+  try {
+    const url =
+      "https://api.openweathermap.org/data/2.5/weather?lat=41.3888&lon=2.159&appid=e6e499bd3921dfc34cafe0be3f3d2e05&lang=CA";
+    const respuestaApiMeteo = await fetch(url);
+    const datosMeteo = await respuestaApiMeteo.json();
+
+    infoMeteo = datosMeteo.weather[0].description;
+  } catch (err) {
+    console.log(err.message);
+  }
+
+  document.querySelector("#texto-meteo").innerHTML = infoMeteo;
+};
+
+recibirInfoMeteo();

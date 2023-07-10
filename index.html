@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sprint 5 IT Academy</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="estilos.css" />
   </head>
@@ -12,7 +16,12 @@
     <!-- Contenido de la pagina Web de Chistes-->
 
     <div class="contenedor">
-      <div class="icono-tiempo">Avui:parcialment ennuvolat</div>
+
+      <!-- API Informacion Meteorologica -->
+      
+      <div class="contenedor-meteo">
+        Avui a Barcelona:  <span id="texto-meteo"></span>
+      </div>
 
       <main>
         <div class="contenedor-main">
@@ -53,10 +62,11 @@
                 😆
               </button>
             </div>
+
             <!-- Boton para el siguiente chiste -->
 
             <button class="btn-chiste" onclick="respuestaChiste()">
-              Siguiente chiste
+              Següent acudit
             </button>
           </div>
         </div>
