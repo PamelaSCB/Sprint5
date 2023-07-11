@@ -3,12 +3,22 @@ let chiste;
 const mostrarBtnes = () => {
   document
     .querySelectorAll("[puntuacion]")
-    .forEach((boton) => (boton.style.display = "block"));
+    .forEach((boton) => (boton.style.display = "block"), 300);
 };
 const esconderBtnes = () => {
   document
     .querySelectorAll("[puntuacion]")
-    .forEach((boton) => (boton.style.display = "none"));
+    .forEach((boton) => (boton.style.display = "none"), 400);
+};
+
+const randomNum10 = () => Math.floor(Math.random() * 10) + 1;
+
+const combinarApisChiste = () => {
+  const randomChiste = randomNum10();
+  console.log("Random chiste:", randomChiste);
+
+  if (randomChiste <= 5) respuestaChiste();
+  else respuestaChiste2();
 };
 
 const respuestaChiste = async () => {
@@ -21,16 +31,28 @@ const respuestaChiste = async () => {
       },
     };
     const respuesta = await fetch(url, opciones);
-    const json = await respuesta.json();
-    chiste = json.joke;
-
+    const datos = await respuesta.json();
+    chiste = datos.joke;
     console.log("Chiste: ", chiste);
-
-    document.querySelector("#text-chiste").innerHTML = `" ${chiste} "`;
   } catch (err) {
-    console.log(err.message);
+    console.error("Error catch:", err);
   }
+  document.querySelector("#text-chiste").innerHTML = `" ${chiste} "`;
+  mostrarBtnes();
+};
 
+const respuestaChiste2 = async () => {
+  esconderBtnes();
+  try {
+    const url = "https://api.chucknorris.io/jokes/random";
+    const respuesta = await fetch(url);
+    const datos = await respuesta.json();
+    chiste = datos.value;
+    console.log("Chiste2: ", chiste);
+  } catch (err) {
+    console.log("Error catch:", err);
+  }
+  document.querySelector("#text-chiste").innerHTML = `" ${chiste} "`;
   mostrarBtnes();
 };
 
